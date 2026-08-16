@@ -1565,7 +1565,7 @@ function renderPosts(){
 }
 function renderNote(){
   var n=$("#storageNote");
-  var base=hasStore?"Posts save to your private storage for this site.":"Preview mode — posts stay in this browser session only.";
+  var base=hasStore?"Posts save to your private storage for this site.":"";
   n.innerHTML='<span>'+base+'</span>'+(state.posts.length?'<button id="backupBtn">Copy backup JSON</button>':'');
   var b=$("#backupBtn");
   if(b)b.addEventListener("click",function(){copyText(JSON.stringify(state,null,2));toast("Backup copied to clipboard");});
